@@ -20,21 +20,21 @@ The Roker.css Library is a modern and feature-rich CSS library designed to simpl
 1. Download the file from GitHub or use the online version.  
 2. Add it to your HTML:  
   
-html```
+html`
    <link rel="stylesheet" href="roker.css">
-```
+`
  
 3. Use predefined classes by combining the element name and theme. For example:  
 
-html```
+html`
    <button class="buttonROYAL">Click Me</button>
-```
+`
  
 
 You can apply themes to any element without restrictions. For example:  
-html```
+html`
 <element class="elementName+Theme"></element>
-```
+`
  
 Additionally, you can customize it further with inline styles:  
 html
