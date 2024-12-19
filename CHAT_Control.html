@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="roker.css"> <!-- Link to the existing CSS file -->
+</head>
+<body class="bodyCHAT">
+
+    <div class="containerCHAT">
+        <!-- Sidebar -->
+        <div class="sidebarCHAT">
+            <div class="logoCHAT">Admin Panel</div>
+            <ul class="navLinksCHAT">
+                <li class="navLinkCHAT"><a href="#">Dashboard</a></li>
+                <li class="navLinkCHAT"><a href="#">Users</a></li>
+                <li class="navLinkCHAT"><a href="#">Settings</a></li>
+                <li class="navLinkCHAT"><a href="#">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="mainContentCHAT">
+            <div class="headerCHAT">
+                Welcome to the Admin Dashboard
+            </div>
+
+            <div class="statsCHAT">
+                <div class="statCardCHAT">
+                    <h3>Total Users</h3>
+                    <p>120</p>
+                </div>
+                <div class="statCardCHAT">
+                    <h3>Active Sessions</h3>
+                    <p>45</p>
+                </div>
+                <div class="statCardCHAT">
+                    <h3>Reports Pending</h3>
+                    <p>8</p>
+                </div>
+            </div>
+
+            <div class="userListCHAT">
+                <h3>User List</h3>
+                <table class="userTableCHAT">
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>johndoe</td>
+                            <td>johndoe@example.com</td>
+                            <td>Active</td>
+                            <td><button class="actionButtonCHAT">View</button></td>
+                        </tr>
+                        <tr>
+                            <td>janedoe</td>
+                            <td>janedoe@example.com</td>
+                            <td>Inactive</td>
+                            <td><button class="actionButtonCHAT">View</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
