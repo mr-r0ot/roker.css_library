@@ -1,0 +1,6133 @@
+/* ROKER CSS LIBRARY */
+/*    Because codes are beautiful....    */
+/*   By Mr. Mohammad Taha Gorji  */
+/*  GitHub: mr-r0ot/roker.css  */
+
+
+
+
+
+
+
+
+
+
+.center {
+    align-items: center;
+    text-align: center; /* برای متن‌ها */
+    height: 100vh; /* برای مرکز کردن عمودی */
+}
+
+
+
+
+/* متغیرهای CSS برای جلوه‌های عمومی */
+:root {
+    --gradient-1: linear-gradient(145deg, #ff7eb3, #ff758c);
+    --gradient-2: linear-gradient(to right, #7f00ff, #e100ff);
+    --neon-border: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 105, 180, 0.5);
+    --glass-background: rgba(255, 255, 255, 0.2);
+    --glass-border: rgba(255, 255, 255, 0.4);
+    --shadow-3d: 0px 5px 15px rgba(0, 0, 0, 0.4);
+    --highlight: rgba(255, 255, 255, 0.6);
+}
+
+/* افکت عمومی سه‌بعدی */
+.threeD {
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+    box-shadow: var(--shadow-3d);
+    transition: transform 0.5s, box-shadow 0.5s, filter 0.5s;
+}
+.threeD:hover {
+    transform: perspective(1000px) rotateX(-5deg) rotateY(-5deg) scale(1.1);
+    filter: brightness(1.2);
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* المان‌های پایه */
+.html3D, .head3D, .body3D {
+    background: var(--gradient-1);
+    color: white;
+    font-family: "Arial", sans-serif;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-3d);
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+}
+.body3D {
+    background: linear-gradient(120deg, #1c1c1c, #3a3a3a);
+    color: #eaeaea;
+}
+
+/* تیترها */
+.h1_3D, .h2_3D, .h3_3D, .h4_3D, .h5_3D, .h6_3D {
+    font-weight: bold;
+    text-transform: uppercase;
+    background: var(--gradient-2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 2.5rem;
+    letter-spacing: 0.1em;
+    border-radius: 10px;
+    padding: 10px;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+.h1_3D:hover, .h2_3D:hover, .h3_3D:hover, .h4_3D:hover, .h5_3D:hover, .h6_3D:hover {
+    color: #ff00ff;
+    text-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* پاراگراف‌ها */
+.p3D {
+    font-size: 1.2rem;
+    color: #ff79c6;
+    background: linear-gradient(145deg, #282a36, #44475a);
+    padding: 15px;
+    border-radius: 10px;
+    line-height: 1.8;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* لینک‌ها */
+.a3D {
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #1e90ff;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    box-shadow: var(--neon-border);
+    transition: all 0.4s ease;
+}
+.a3D:hover {
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    border: 2px solid white;
+    box-shadow: var(--neon-border), 0px 0px 20px #fff;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* دکمه‌ها */
+.button3D {
+    background: var(--gradient-1);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    box-shadow: var(--shadow-3d);
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+.button3D:hover {
+    background: linear-gradient(145deg, #00c6ff, #0072ff);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+/* فرم‌ها */
+.form3D {
+    background: var(--glass-background);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-3d);
+}
+.input3D, .textarea3D, .select3D {
+    background: rgba(255, 255, 255, 0.7);
+    color: #2d3436;
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px 0;
+    width: 100%;
+    box-shadow: var(--shadow-3d);
+    transition: box-shadow 0.3s ease;
+}
+.input3D:focus, .textarea3D:focus, .select3D:focus {
+    outline: none;
+    box-shadow: 0px 5px 20px rgba(0, 123, 255, 0.5);
+}
+
+/* جداول */
+.table3D {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--glass-background);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-3d);
+}
+.table3D th, .table3D td {
+    padding: 15px;
+    border: 1px solid var(--glass-border);
+    text-align: center;
+    color: white;
+}
+.table3D th {
+    background: linear-gradient(145deg, #636e72, #2d3436);
+    color: #fff;
+}
+.table3D tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* مدیا */
+.img3D {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: var(--shadow-3d);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.img3D:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* متغیرهای CSS برای تم سلطنتی */
+:root {
+    --gold: #d4af37;
+    --dark-gold: #b8860b;
+    --black: #0e0e0e;
+    --white: #ffffff;
+    --shadow-gold: rgba(212, 175, 55, 0.7);
+    --gradient-gold: linear-gradient(145deg, #d4af37, #b8860b);
+    --gradient-dark: linear-gradient(145deg, #0e0e0e, #292929);
+    --highlight-gold: rgba(255, 223, 127, 0.5);
+}
+
+/* بدنه اصلی */
+.bodyROYAL {
+    background: var(--gradient-dark);
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* هدر شیک و سلطنتی */
+.h1ROYAL, h2ROYAL, h3ROYAL, h4ROYAL, h5ROYAL, h6ROYAL {
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 10px 0;
+    color: var(--gold);
+    text-shadow: 0px 4px 8px var(--shadow-gold);
+    position: relative;
+    overflow: hidden;
+}
+.h1ROYAL::before, h1ROYAL::after, h2ROYAL::before, h2ROYAL::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background: var(--gold);
+    width: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.h1ROYAL::before, h2ROYAL::before {
+    left: -120px;
+    animation: slide-in-leftROYAL 1.5s ease-out forwards;
+}
+.h1ROYAL::after, h2ROYAL::after {
+    right: -120px;
+    animation: slide-in-rightROYAL 1.5s ease-out forwards;
+}
+@keyframes slide-in-leftROYAL {
+    0% { left: -120px; width: 0; }
+    100% { left: 0; width: 100px; }
+}
+@keyframes slide-in-rightROYAL {
+    0% { right: -120px; width: 0; }
+    100% { right: 0; width: 100px; }
+}
+
+/* پاراگراف‌ها */
+.pROYAL {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: justify;
+    margin: 15px 0;
+    color: var(--white);
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* لینک‌ها */
+.aROYAL {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+.aROYAL:hover {
+    background: var(--gradient-gold);
+    color: var(--black);
+    border: 2px solid var(--gold);
+    box-shadow: 0px 4px 15px var(--shadow-gold);
+}
+
+/* دکمه‌های سلطنتی */
+.buttonROYAL {
+    font-family: 'Playfair Display', serif;
+    background: var(--gradient-gold);
+    color: var(--black);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.buttonROYAL:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 20px var(--shadow-gold);
+}
+
+/* فرم‌ها */
+.inputROYAL, textareaROYAL {
+    font-family: 'Playfair Display', serif;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 10px 0;
+    outline: none;
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+.inputROYAL:focus, textareaROYAL:focus {
+    border: 2px solid var(--highlight-gold);
+    box-shadow: 0px 8px 15px rgba(255, 223, 127, 0.5);
+}
+
+/* جداول سلطنتی */
+.tableROYAL {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--gradient-dark);
+    color: var(--white);
+    text-align: left;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.thROYAL, tdROYAL {
+    padding: 15px;
+    border-bottom: 1px solid var(--dark-gold);
+}
+.thROYAL {
+    background: var(--gradient-gold);
+    color: var(--black);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* انیمیشن‌ها و افکت‌ها */
+@keyframes glowROYAL {
+    0%, 100% { box-shadow: 0px 0px 10px var(--gold); }
+    50% { box-shadow: 0px 0px 20px var(--highlight-gold); }
+}
+
+.h1ROYAL:hover, h2ROYAL:hover {
+    animation: glowROYAL 1.5s infinite alternate;
+}
+
+.buttonROYAL:hover {
+    animation: glowROYAL 1.5s infinite alternate;
+}
+/* طراحی بخش نظرات */
+.comment-listROYAL {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.commentROYAL {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.commentROYAL:hover {
+    background: var(--gradient-dark);
+    box-shadow: 0px 4px 15px var(--shadow-gold);
+}
+
+/* هدر کامنت */
+.comment-headerROYAL {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-authorROYAL {
+    font-weight: bold;
+    color: var(--gold);
+    text-transform: capitalize;
+}
+
+.comment-dateROYAL {
+    font-size: 0.9rem;
+    color: var(--white);
+    font-style: italic;
+}
+
+/* متن کامنت */
+.comment-textROYAL {
+    font-size: 1rem;
+    color: var(--white);
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+/* استایل دکمه‌ها */
+.buttonROYAL {
+    background: var(--gradient-gold);
+    color: var(--black);
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buttonROYAL:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 15px var(--shadow-gold);
+}
+
+/* متن placeholder در textarea */
+.textareaROYAL::placeholder {
+    color: var(--white);
+    font-style: italic;
+    opacity: 0.7;
+}
+/* طراحی بخش پیام‌ها */
+.message-listROYAL {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.messageROYAL {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.messageROYAL:hover {
+    background: var(--gradient-dark);
+    box-shadow: 0px 4px 15px var(--shadow-gold);
+}
+
+/* هدر پیام */
+.message-headerROYAL {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.message-authorROYAL {
+    font-weight: bold;
+    color: var(--gold);
+    text-transform: capitalize;
+}
+
+.message-dateROYAL {
+    font-size: 0.9rem;
+    color: var(--white);
+    font-style: italic;
+}
+
+/* متن پیام */
+.message-textROYAL {
+    font-size: 1rem;
+    color: var(--white);
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+/* استایل دکمه‌ها */
+.buttonROYAL {
+    background: var(--gradient-gold);
+    color: var(--black);
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buttonROYAL:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 15px var(--shadow-gold);
+}
+
+/* متن placeholder در textarea */
+.textareaROYAL::placeholder {
+    color: var(--white);
+    font-style: italic;
+    opacity: 0.7;
+}
+
+/* استایل فرم ارسال پیام */
+.formROYAL {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+}
+
+.textareaROYAL {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.textareaROYAL:focus {
+    box-shadow: 0px 4px 12px rgba(255, 223, 127, 0.5);
+    outline: none;
+}
+
+/* طراحی دکمه ارسال پیام */
+.buttonROYAL {
+    background: var(--gradient-gold);
+    color: var(--black);
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.buttonROYAL:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 20px var(--shadow-gold);
+}
+
+/* انیمیشن برای نمایش پیام‌های جدید */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.messageROYAL {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* متغیرهای CSS برای طراحی شیشه‌ای */
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-shadow: rgba(0, 0, 0, 0.3);
+    --glass-highlight: rgba(255, 255, 255, 0.3);
+    --primary-bg: #f5f5f5;
+    --primary-text: #333;
+    --primary-color: #0078d4;
+    --border-radius: 15px;
+    --transition-speed: 0.3s;
+}
+
+/* بدنه اصلی با افکت شیشه‌ای */
+.bodyGLASS {
+    background: linear-gradient(145deg, #f5f5f5, #e2e2e2);
+    color: var(--primary-text);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    font-size: 16px;
+}
+
+/* هدر شیشه‌ای */
+.headerGLASS {
+    position: relative;
+    width: 100%;
+    padding: 20px 40px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 20px var(--glass-shadow);
+    transition: all var(--transition-speed);
+}
+.headerGLASS:hover {
+    box-shadow: 0 6px 30px var(--glass-highlight);
+}
+
+/* لینک‌ها با افکت شیشه‌ای */
+.aGLASS {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.aGLASS:hover {
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* دکمه‌های شیشه‌ای */
+.buttonGLASS {
+    font-family: 'Roboto', sans-serif;
+    background: var(--glass-bg);
+    border: 2px solid var(--glass-border);
+    color: var(--primary-color);
+    padding: 12px 30px;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0px 6px 15px var(--glass-shadow);
+    transition: all var(--transition-speed);
+}
+.buttonGLASS:hover {
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0px 8px 20px var(--glass-highlight);
+    transform: translateY(-3px);
+}
+
+/* کارت‌های شیشه‌ای */
+.cardGLASS {
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    border: 2px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px var(--glass-shadow);
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    transition: all var(--transition-speed);
+}
+.cardGLASS:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px var(--glass-highlight);
+}
+
+/* فرم شیشه‌ای */
+.formGLASS {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--glass-border);
+    padding: 30px;
+    box-shadow: 0 4px 30px var(--glass-shadow);
+    transition: all var(--transition-speed);
+}
+.formGLASS:hover {
+    box-shadow: 0 6px 35px var(--glass-highlight);
+}
+
+/* فیلدهای ورودی شیشه‌ای */
+.inputGLASS, textareaGLASS {
+    background: var(--glass-bg);
+    color: var(--primary-text);
+    border: 2px solid var(--glass-border);
+    padding: 12px;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    margin: 10px 0;
+    transition: all var(--transition-speed);
+    box-shadow: 0 4px 10px var(--glass-shadow);
+}
+.inputGLASS:focus, textareaGLASS:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 15px var(--glass-highlight);
+}
+
+/* لینک‌های شیشه‌ای درون جداول */
+.tableGLASS {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--glass-border);
+    box-shadow: 0px 4px 20px var(--glass-shadow);
+    margin-top: 20px;
+}
+.thGLASS, tdGLASS {
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+}
+.thGLASS {
+    background: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+/* انیمیشن شیشه‌ای برای المان‌ها */
+@keyframes glass-shine {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+}
+
+buttonGLASS:hover, cardGLASS:hover, formGLASS:hover {
+    animation: glass-shine 1s infinite;
+}
+/* طراحی شیشه‌ای برای پیام‌ها */
+.message-listGLASS {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 800px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: 0px 4px 20px var(--glass-shadow);
+}
+
+.messageGLASS {
+    background: var(--glass-bg);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+    transition: all var(--transition-speed);
+    box-shadow: 0 4px 15px var(--glass-shadow);
+}
+
+.messageGLASS:hover {
+    box-shadow: 0 6px 20px var(--glass-highlight);
+    transform: translateY(-5px);
+}
+
+/* هدر پیام */
+.message-headerGLASS {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.message-authorGLASS {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.message-dateGLASS {
+    font-size: 0.9rem;
+    color: var(--primary-text);
+    font-style: italic;
+}
+
+/* متن پیام */
+.message-textGLASS {
+    font-size: 1rem;
+    color: var(--primary-text);
+    line-height: 1.6;
+}
+
+/* انیمیشن شیشه‌ای برای پیام‌ها */
+@keyframes glass-shine {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+}
+
+.messageGLASS:hover {
+    animation: glass-shine 1s infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* متغیرهای رنگی برای طراحی سایبری */
+:root {
+    --cyber-bg: #111111; /* پس‌زمینه تاریک */
+    --cyber-text: #00FF00; /* متن سبز neon */
+    --cyber-border: #00FF00; /* مرزهای سبز neon */
+    --cyber-shadow: rgba(0, 255, 0, 0.3); /* سایه سبز */
+    --cyber-highlight: #FF00FF; /* رنگ برجسته برای هاور */
+    --cyber-accent: #00BFFF; /* رنگ آبی برای تاکید */
+    --font-family: 'Courier New', monospace; /* فونت هکری */
+    --border-radius: 10px;
+    --transition-speed: 0.3s;
+}
+
+/* طراحی اصلی بدنه */
+.bodyCYBER {
+    background-color: var(--cyber-bg);
+    color: var(--cyber-text);
+    font-family: var(--font-family);
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    line-height: 1.6;
+}
+
+/* هدر سایبری */
+.headerCYBER {
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid var(--cyber-border);
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: 0 0 10px var(--cyber-shadow);
+    transition: all var(--transition-speed);
+}
+.headerCYBER:hover {
+    box-shadow: 0 0 20px var(--cyber-highlight);
+}
+
+/* لینک‌های سایبری */
+.aCYBER {
+    color: var(--cyber-accent);
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    transition: color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px var(--cyber-shadow);
+}
+.aCYBER:hover {
+    color: var(--cyber-highlight);
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px var(--cyber-highlight);
+}
+
+/* دکمه‌های سایبری */
+.buttonCYBER {
+    background-color: var(--cyber-bg);
+    border: 2px solid var(--cyber-border);
+    color: var(--cyber-text);
+    padding: 15px 25px;
+    border-radius: var(--border-radius);
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    box-shadow: 0 4px 10px var(--cyber-shadow);
+}
+.buttonCYBER:hover {
+    background-color: var(--cyber-accent);
+    color: var(--cyber-bg);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px var(--cyber-highlight);
+}
+
+/* کارت‌های سایبری */
+.cardCYBER {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid var(--cyber-border);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    color: var(--cyber-text);
+    box-shadow: 0 4px 10px var(--cyber-shadow);
+    transition: all var(--transition-speed);
+}
+.cardCYBER:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px var(--cyber-highlight);
+}
+
+/* ورودی‌ها و فیلدهای سایبری */
+.inputCYBER, textareaCYBER {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--cyber-text);
+    border: 2px solid var(--cyber-border);
+    padding: 12px;
+    border-radius: var(--border-radius);
+    font-size: 18px;
+    margin: 10px 0;
+    box-shadow: 0 4px 10px var(--cyber-shadow);
+    transition: all var(--transition-speed);
+}
+.inputCYBER:focus, textareaCYBER:focus {
+    outline: none;
+    border-color: var(--cyber-highlight);
+    box-shadow: 0 4px 20px var(--cyber-highlight);
+}
+
+/* فرم سایبری */
+.formCYBER {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid var(--cyber-border);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px var(--cyber-shadow);
+    transition: all var(--transition-speed);
+}
+.formCYBER:hover {
+    box-shadow: 0 6px 20px var(--cyber-highlight);
+}
+
+/* جداول سایبری */
+.tableCYBER {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--cyber-border);
+    color: var(--cyber-text);
+    box-shadow: 0 4px 10px var(--cyber-shadow);
+}
+.thCYBER, tdCYBER {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--cyber-border);
+    font-size: 16px;
+}
+.thCYBER {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* انیمیشن و افکت‌های سایبری */
+@keyframes cyber-glitch {
+    0% {
+        text-shadow: 2px 2px 0 var(--cyber-highlight), -2px -2px 0 var(--cyber-highlight);
+    }
+    25% {
+        text-shadow: -2px 2px 0 var(--cyber-highlight), 2px -2px 0 var(--cyber-highlight);
+    }
+    50% {
+        text-shadow: 2px -2px 0 var(--cyber-highlight), -2px 2px 0 var(--cyber-highlight);
+    }
+    75% {
+        text-shadow: -2px -2px 0 var(--cyber-highlight), 2px 2px 0 var(--cyber-highlight);
+    }
+    100% {
+        text-shadow: 2px 2px 0 var(--cyber-highlight), -2px -2px 0 var(--cyber-highlight);
+    }
+}
+
+/* اعمال افکت گلیچ (Glitch) به تمام متن‌های سایبری */
+.h1CYBER, h2CYBER, h3CYBER, h4CYBER, h5CYBER, h6CYBER, pCYBER {
+    animation: cyber-glitch 1s infinite;
+}
+
+/* لینک‌ها و دکمه‌های هکری */
+.aCYBER, buttonCYBER {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.aCYBER:hover, buttonCYBER:hover {
+    color: var(--cyber-highlight);
+    text-shadow: 0 0 10px var(--cyber-highlight), 0 0 20px var(--cyber-highlight);
+}
+
+/* بکار بردن سایه‌ها و هایلایت‌ها */
+.buttonCYBER, inputCYBER, textareaCYBER, .cardCYBER {
+    box-shadow: 0px 4px 10px var(--cyber-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.buttonCYBER:hover, inputCYBER:focus, textareaCYBER:focus, .cardCYBER:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px var(--cyber-highlight);
+}
+
+/* لینک‌های متنی با افکت سایبری */
+.aCYBER {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--cyber-text);
+    padding: 10px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.aCYBER::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--cyber-accent);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.aCYBER:hover::after {
+    transform: scaleX(1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* تنظیمات متغیرهای رنگ */
+:root {
+    --colorful-bg: linear-gradient(45deg, #ff6ec7, #ffb6c1, #ff66b2, #00b3b3, #66ff66);
+    --colorful-text: #ffffff;
+    --colorful-shadow: rgba(0, 0, 0, 0.2);
+    --colorful-accent: #ffeb3b;
+    --colorful-border: #ff00ff;
+    --font-family: 'Arial', sans-serif;
+    --transition-speed: 0.4s;
+}
+
+/* Body COLORFUL */
+.bodyCOLORFUL {
+    background: var(--colorful-bg);
+    color: var(--colorful-text);
+    font-family: var(--font-family);
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    animation: colorShift 10s infinite alternate;
+}
+
+/* Header COLORFUL */
+.headerCOLORFUL {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--colorful-accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px var(--colorful-shadow);
+    animation: pulseText 1.5s infinite ease-in-out;
+}
+
+/* Paragraph COLORFUL */
+.pCOLORFUL {
+    font-size: 1.25rem;
+    margin: 20px 0;
+    color: var(--colorful-text);
+    text-shadow: 1px 1px 3px var(--colorful-shadow);
+    animation: bounce 2s infinite alternate;
+}
+
+/* Button COLORFUL */
+.buttonCOLORFUL {
+    padding: 15px 30px;
+    background-color: var(--colorful-accent);
+    color: var(--colorful-text);
+    font-size: 1.25rem;
+    font-weight: bold;
+    border: 2px solid var(--colorful-border);
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px var(--colorful-shadow);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.buttonCOLORFUL:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 20px #ff00ff;
+}
+
+/* Link COLORFUL */
+.aCOLORFUL {
+    color: var(--colorful-accent);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color var(--transition-speed), transform var(--transition-speed);
+}
+
+.aCOLORFUL:hover {
+    color: #ffeb3b;
+    transform: scale(1.1);
+}
+
+/* Input COLORFUL */
+.inputCOLORFUL {
+    padding: 10px 15px;
+    font-size: 1.25rem;
+    border: 2px solid var(--colorful-border);
+    border-radius: 10px;
+    background-color: #fff;
+    color: var(--colorful-text);
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.inputCOLORFUL:focus {
+    border-color: var(--colorful-accent);
+    box-shadow: 0 0 10px var(--colorful-accent);
+}
+
+/* Card COLORFUL */
+.cardCOLORFUL {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid var(--colorful-border);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.cardCOLORFUL:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Gradient Animation for Background */
+@keyframes colorShift {
+    0% {
+        background: linear-gradient(45deg, #ff6ec7, #ffb6c1, #ff66b2, #00b3b3, #66ff66);
+    }
+    50% {
+        background: linear-gradient(45deg, #ffeb3b, #ff00ff, #00b3b3, #ff66b2, #66ff66);
+    }
+    100% {
+        background: linear-gradient(45deg, #ff6ec7, #ffb6c1, #ff66b2, #00b3b3, #66ff66);
+    }
+}
+
+/* Text Pulse Effect */
+@keyframes pulseText {
+    0% {
+        text-shadow: 2px 2px 5px var(--colorful-shadow), 0 0 25px var(--colorful-accent), 0 0 50px var(--colorful-accent);
+    }
+    50% {
+        text-shadow: 2px 2px 5px var(--colorful-shadow), 0 0 15px var(--colorful-accent), 0 0 30px var(--colorful-accent);
+    }
+    100% {
+        text-shadow: 2px 2px 5px var(--colorful-shadow), 0 0 25px var(--colorful-accent), 0 0 50px var(--colorful-accent);
+    }
+}
+
+/* Bounce Effect */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* تنظیمات پیشرفته برای طراحی لوکس */
+:root {
+    --luxury-bg: linear-gradient(135deg, #f3f4f6, #d8d9da);
+    --luxury-accent: #d4af37;  /* طلایی */
+    --luxury-text: #1f1f1f;
+    --luxury-border: #e0e0e0;
+    --luxury-shadow: rgba(0, 0, 0, 0.15);
+    --luxury-hover: rgba(212, 175, 55, 0.8);
+    --luxury-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --luxury-transition: 0.4s ease;
+}
+
+/* Body LUXURY */
+.bodyLUXURY {
+    background: var(--luxury-bg);
+    color: var(--luxury-text);
+    font-family: var(--luxury-font);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Header LUXURY */
+.headerLUXURY {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--luxury-accent);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 6px var(--luxury-shadow);
+    margin-bottom: 20px;
+    animation: luxuryPulse 2s infinite ease-in-out;
+}
+
+/* Paragraph LUXURY */
+.pLUXURY {
+    font-size: 1.2rem;
+    color: var(--luxury-text);
+    margin: 15px 0;
+    text-shadow: 2px 2px 5px var(--luxury-shadow);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Button LUXURY */
+.buttonLUXURY {
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    background-color: var(--luxury-accent);
+    color: #fff;
+    border: 2px solid var(--luxury-border);
+    border-radius: 50px;
+    box-shadow: 0 4px 10px var(--luxury-shadow);
+    cursor: pointer;
+    transition: transform var(--luxury-transition), box-shadow var(--luxury-transition);
+}
+
+.buttonLUXURY:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--luxury-hover);
+}
+
+/* Input LUXURY */
+.inputLUXURY {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    background-color: #fff;
+    border: 2px solid var(--luxury-border);
+    border-radius: 30px;
+    color: var(--luxury-text);
+    transition: border-color var(--luxury-transition), box-shadow var(--luxury-transition);
+}
+
+.inputLUXURY:focus {
+    border-color: var(--luxury-accent);
+    box-shadow: 0 0 10px var(--luxury-accent);
+}
+
+/* Card LUXURY */
+.cardLUXURY {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    width: 350px;
+    border: 1px solid var(--luxury-border);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform var(--luxury-transition), box-shadow var(--luxury-transition);
+    margin: 20px;
+}
+
+.cardLUXURY:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Link LUXURY */
+.aLUXURY {
+    color: var(--luxury-accent);
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: color var(--luxury-transition), transform var(--luxury-transition);
+}
+
+.aLUXURY:hover {
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* Footer LUXURY */
+.footerLUXURY {
+    background-color: var(--luxury-accent);
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 0 -4px 8px var(--luxury-shadow);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Animation for Pulsing Effect */
+@keyframes luxuryPulse {
+    0% {
+        text-shadow: 3px 3px 6px var(--luxury-shadow), 0 0 25px var(--luxury-accent), 0 0 50px var(--luxury-accent);
+    }
+    50% {
+        text-shadow: 3px 3px 6px var(--luxury-shadow), 0 0 15px var(--luxury-accent), 0 0 30px var(--luxury-accent);
+    }
+    100% {
+        text-shadow: 3px 3px 6px var(--luxury-shadow), 0 0 25px var(--luxury-accent), 0 0 50px var(--luxury-accent);
+    }
+}
+/* استایل برای کارت لاگین */
+.login-cardLUXURY {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    width: 350px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* افکت hover برای کارت */
+.login-cardLUXURY:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* استایل برای بخش ورودی‌ها */
+.input-group {
+    margin: 15px 0;
+}
+
+/* Footer زیبای صفحه لاگین */
+.footerLUXURY {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+/* لینک ثبت‌نام */
+.aLUXURY {
+    color: var(--luxury-accent);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.aLUXURY:hover {
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* تنظیمات اولیه برای متغیرها */
+:root {
+    --main-bg-color: #1a1a1d;  /* پس‌زمینه تیره */
+    --accent-color: #ff407b;   /* رنگ برجسته */
+    --text-color: #ffffff;     /* رنگ متن */
+    --card-bg: rgba(255, 255, 255, 0.1); /* پس‌زمینه نیمه شفاف برای کارت */
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --font-family: 'Poppins', sans-serif;
+    --transition-speed: 0.4s ease;
+}
+
+/* طراحی بدنه */
+.bodyGRAPHIC {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: var(--main-bg-color);
+    font-family: var(--font-family);
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+/* Header GRAPHIC */
+.headerGRAPHIC {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+    padding-bottom: 20px;
+    display: inline-block;
+    animation: headerAnimation 3s ease-in-out infinite alternate;
+}
+
+/* انیمیشن برای حرکت متن هدر */
+@keyframes headerAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Card GRAPHIC */
+.cardGRAPHIC {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px var(--shadow-color);
+    text-align: center;
+    max-width: 350px;
+    width: 100%;
+    backdrop-filter: blur(10px); /* ایجاد افکت تارشدگی پس‌زمینه */
+    position: relative;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.cardGRAPHIC:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px var(--shadow-color);
+}
+
+/* Title داخل کارت */
+.cardTitleGRAPHIC {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* توضیحات کارت */
+.cardDescriptionGRAPHIC {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Button GRAPHIC */
+.buttonGRAPHIC {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    box-shadow: 0 5px 20px var(--shadow-color);
+}
+
+.buttonGRAPHIC:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px var(--shadow-color);
+}
+
+/* Input GRAPHIC */
+.inputGRAPHIC {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    outline: none;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+    width: 100%;
+}
+
+.inputGRAPHIC:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 8px var(--accent-color);
+}
+
+/* Link GRAPHIC */
+.aGRAPHIC {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: color var(--transition-speed), transform var(--transition-speed);
+}
+
+.aGRAPHIC:hover {
+    color: var(--text-color);
+    transform: scale(1.05);
+}
+
+/* Footer GRAPHIC */
+.footerGRAPHIC {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    backdrop-filter: blur(5px); /* ایجاد افکت تارشدگی پس‌زمینه */
+}
+
+/* افکت های انیمیشن در هنگام بارگذاری */
+@keyframes loadEffect {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.cardGRAPHIC,
+.buttonGRAPHIC,
+.footerGRAPHIC {
+    animation: loadEffect 1.5s ease-out forwards;
+}
+
+/* ساخت افکت دایره‌ای */
+.circleGRAPHIC {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulseCircle 3s infinite alternate;
+}
+
+@keyframes pulseCircle {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* تنظیمات اولیه */
+:root {
+    --classic-bg-color: #f4f1e1; /* پس‌زمینه رنگ کرم کلاسیک */
+    --classic-text-color: #2a2a2a; /* رنگ متن تیره */
+    --classic-border-color: #8e6e53; /* رنگ مرزی با تناژ قهوه‌ای */
+    --classic-accent-color: #d4af37; /* رنگ طلایی برای تاکید */
+    --classic-shadow-color: rgba(0, 0, 0, 0.1); /* سایه ملایم */
+    --font-family-classic: 'Garamond', serif; /* فونت کلاسیک */
+    --font-family-headline: 'Times New Roman', serif; /* فونت تیتر کلاسیک */
+    --transition-speed: 0.3s ease; /* زمان انیمیشن‌ها */
+}
+
+/* Body CLASSIC */
+.bodyCLASSIC {
+    background-color: var(--classic-bg-color);
+    color: var(--classic-text-color);
+    font-family: var(--font-family-classic);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Header CLASSIC */
+.headerCLASSIC {
+    font-size: 3rem;
+    font-family: var(--font-family-headline);
+    font-weight: bold;
+    color: var(--classic-accent-color);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 5px var(--classic-shadow-color);
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--classic-border-color);
+    margin-bottom: 20px;
+}
+
+/* Paragraph CLASSIC */
+.pCLASSIC {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin: 0 20px;
+    color: var(--classic-text-color);
+    max-width: 600px;
+    margin: 20px auto;
+    text-shadow: 1px 1px 4px var(--classic-shadow-color);
+}
+
+/* Button CLASSIC */
+.buttonCLASSIC {
+    padding: 15px 40px;
+    font-size: 1.25rem;
+    font-family: var(--font-family-classic);
+    background-color: var(--classic-accent-color);
+    color: #fff;
+    border: 2px solid var(--classic-border-color);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px var(--classic-shadow-color);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.buttonCLASSIC:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--classic-accent-color);
+}
+
+/* Card CLASSIC */
+.cardCLASSIC {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px var(--classic-shadow-color);
+    width: 350px;
+    text-align: center;
+    margin: 20px;
+    border: 2px solid var(--classic-border-color);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.cardCLASSIC:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px var(--classic-shadow-color);
+}
+
+/* Title Inside Card CLASSIC */
+.cardTitleCLASSIC {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--classic-accent-color);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Footer CLASSIC */
+.footerCLASSIC {
+    background-color: var(--classic-bg-color);
+    color: var(--classic-text-color);
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid var(--classic-border-color);
+    box-shadow: 0 -4px 10px var(--classic-shadow-color);
+}
+
+/* Link CLASSIC */
+.aCLASSIC {
+    color: var(--classic-accent-color);
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: color var(--transition-speed), transform var(--transition-speed);
+}
+
+.aCLASSIC:hover {
+    color: var(--classic-text-color);
+    transform: scale(1.05);
+}
+
+/* Input CLASSIC */
+.inputCLASSIC {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    background-color: #fff;
+    border: 2px solid var(--classic-border-color);
+    border-radius: 10px;
+    color: var(--classic-text-color);
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.inputCLASSIC:focus {
+    border-color: var(--classic-accent-color);
+    box-shadow: 0 0 10px var(--classic-accent-color);
+}
+
+/* Animation for Fading in (for Card and Button) */
+@keyframes fadeInCLASSIC {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cardCLASSIC,
+.buttonCLASSIC,
+.footerCLASSIC {
+    animation: fadeInCLASSIC 1s ease-out forwards;
+}
+
+/* Container for centered content */
+.containerCLASSIC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* تنظیمات اولیه */
+:root {
+    --lash-primary-color: #f05454; /* رنگ اصلی، قرمز تند */
+    --lash-accent-color: #222222; /* پس‌زمینه تیره */
+    --lash-hover-color: #ff6b6b; /* رنگ‌ها برای هاور */
+    --lash-shadow-color: rgba(0, 0, 0, 0.5); /* سایه‌های تیره */
+    --lash-font-family: 'Arial', sans-serif; /* فونت ساده و خوانا */
+    --lash-border-radius: 10px; /* حاشیه‌های گرد */
+}
+
+/* بدنه */
+.bodyLASH {
+    font-family: var(--lash-font-family);
+    background-color: var(--lash-accent-color);
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 100vh;
+}
+
+/* تیترهای اصلی */
+.h1LASH, .h2LASH, .h3LASH {
+    font-family: 'Impact', sans-serif;
+    color: var(--lash-primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 5px var(--lash-shadow-color);
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* پاراگراف‌ها */
+.pLASH {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #eaeaea;
+    text-shadow: 2px 2px 4px var(--lash-shadow-color);
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+/* لینک‌ها */
+.aLASH {
+    color: var(--lash-primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: var(--lash-border-radius);
+    box-shadow: 0 5px 15px var(--lash-shadow-color);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.aLASH:hover {
+    background-color: var(--lash-primary-color);
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px var(--lash-shadow-color);
+}
+
+/* دکمه‌ها */
+.buttonLASH {
+    background-color: var(--lash-primary-color);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: var(--lash-border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px var(--lash-shadow-color);
+}
+
+.buttonLASH:hover {
+    background-color: var(--lash-hover-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px var(--lash-shadow-color);
+}
+
+/* فرم‌ها */
+.inputLASH, .textareaLASH {
+    background-color: #333;
+    color: white;
+    border: 2px solid var(--lash-primary-color);
+    padding: 10px;
+    font-size: 16px;
+    border-radius: var(--lash-border-radius);
+    box-shadow: 0 5px 10px var(--lash-shadow-color);
+    transition: border-color 0.3s ease;
+}
+
+.inputLASH:focus, .textareaLASH:focus {
+    border-color: var(--lash-hover-color);
+    outline: none;
+}
+
+/* کارت‌ها */
+.cardLASH {
+    background-color: #444;
+    color: white;
+    border-radius: var(--lash-border-radius);
+    padding: 20px;
+    box-shadow: 0 10px 30px var(--lash-shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px auto;
+    max-width: 300px;
+}
+
+.cardLASH:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px var(--lash-shadow-color);
+}
+
+/* لیست‌ها */
+.ulLASH {
+    list-style-type: none;
+    padding: 0;
+}
+
+.liLASH {
+    background-color: #555;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: var(--lash-border-radius);
+    box-shadow: 0 4px 10px var(--lash-shadow-color);
+}
+
+/* استفاده از المان‌ها */
+.h1LASH, .h2LASH, .h3LASH, .pLASH, .aLASH, .buttonLASH, .inputLASH, .textareaLASH, .cardLASH, .ulLASH, .liLASH {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+}
+
+/* پس‌زمینه و وضعیت کلی */
+.backgroundLASH {
+    background-color: #111;
+    color: white;
+    padding: 50px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* تنظیمات اولیه */
+:root {
+    --evil-primary-color: #d60000; /* قرمز شیطانی */
+    --evil-accent-color: #1a1a1a; /* رنگ زمینه تیره */
+    --evil-hover-color: #ff3333; /* رنگ هاور روشن‌تر */
+    --evil-shadow-color: rgba(0, 0, 0, 0.9); /* سایه‌های سیاه */
+    --evil-font-family: 'Creepster', cursive, sans-serif; /* فونت ترسناک */
+    --evil-border-radius: 8px; /* گوشه‌های دایره‌ای تیز */
+    --evil-transition: 0.3s ease; /* انیمیشن انتقال */
+}
+
+/* بدنه */
+.bodyEVIL {
+    font-family: var(--evil-font-family);
+    background-color: var(--evil-accent-color);
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* تیترهای اصلی */
+.h1EVIL, .h2EVIL, .h3EVIL {
+    font-family: var(--evil-font-family);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--evil-primary-color);
+    text-shadow: 5px 5px 20px var(--evil-shadow-color), 0 0 25px var(--evil-primary-color), 0 0 5px black;
+    animation: pulse 1.5s infinite alternate;
+    margin: 20px 0;
+}
+
+/* انیمیشن برای جلوه‌ی ضربان */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* پاراگراف‌ها */
+.pEVIL {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #f1f1f1;
+    text-shadow: 2px 2px 8px var(--evil-shadow-color);
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+/* انیمیشن فید این برای متن */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* لینک‌ها */
+.aEVIL {
+    color: var(--evil-primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: var(--evil-border-radius);
+    background-color: transparent;
+    box-shadow: 0 0 20px var(--evil-primary-color);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.aEVIL:hover {
+    background-color: var(--evil-primary-color);
+    color: #000;
+    transform: scale(1.1);
+    box-shadow: 0 0 30px var(--evil-primary-color), 0 0 50px var(--evil-shadow-color);
+}
+
+/* دکمه‌ها */
+.buttonEVIL {
+    background-color: var(--evil-primary-color);
+    color: white;
+    border: none;
+    padding: 20px 50px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: var(--evil-border-radius);
+    cursor: pointer;
+    box-shadow: 0 10px 25px var(--evil-shadow-color);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buttonEVIL:hover {
+    background-color: var(--evil-hover-color);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px var(--evil-shadow-color);
+}
+
+/* فرم‌ها */
+.inputEVIL, .textareaEVIL {
+    background-color: #333;
+    color: white;
+    border: 2px solid var(--evil-primary-color);
+    padding: 12px;
+    font-size: 18px;
+    border-radius: var(--evil-border-radius);
+    box-shadow: 0 5px 15px var(--evil-shadow-color);
+    transition: border-color 0.3s ease;
+}
+
+.inputEVIL:focus, .textareaEVIL:focus {
+    border-color: var(--evil-hover-color);
+    outline: none;
+}
+
+/* کارت‌ها */
+.cardEVIL {
+    background-color: #444;
+    color: white;
+    border-radius: var(--evil-border-radius);
+    padding: 25px;
+    box-shadow: 0 15px 40px var(--evil-shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 30px auto;
+    max-width: 320px;
+    position: relative;
+}
+
+.cardEVIL:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid var(--evil-primary-color);
+    border-radius: var(--evil-border-radius);
+    animation: glitch 1.5s infinite alternate;
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(-10px, 10px);
+    }
+    100% {
+        transform: translate(10px, -10px);
+    }
+}
+
+/* لیست‌ها */
+.ulEVIL {
+    list-style-type: none;
+    padding: 0;
+}
+
+.liEVIL {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+    margin: 12px 0;
+    border-radius: var(--evil-border-radius);
+    box-shadow: 0 5px 15px var(--evil-shadow-color);
+    position: relative;
+}
+
+.liEVIL:before {
+    content: '🔥';
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    animation: fireGlow 1s infinite alternate;
+}
+
+@keyframes fireGlow {
+    0% {
+        color: rgba(255, 0, 0, 1);
+    }
+    100% {
+        color: rgba(255, 165, 0, 1);
+    }
+}
+
+/* پس‌زمینه */
+.backgroundEVIL {
+    background-color: #111;
+    color: white;
+    padding: 50px 0;
+    animation: fadeIn 2s ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* تنظیمات پیش‌فرض برای طراحی واکنش‌گرا */
+:root {
+    --primary-color: #007AFF; /* رنگ آبی ملایم */
+    --secondary-color: #E5E5E5; /* رنگ خاکی روشن */
+    --text-color: #333; /* رنگ متن اصلی */
+    --background-color: #ffffff; /* رنگ پس‌زمینه سفید */
+    --button-bg: #34C759; /* رنگ سبز دکمه‌ها */
+    --border-radius: 12px; /* گوشه‌های گرد */
+    --transition-duration: 0.3s; /* مدت زمان انیمیشن‌ها */
+    --input-padding: 12px; /* فاصله در ورودی‌ها */
+    --font-family: 'Helvetica Neue', Arial, sans-serif;
+    --font-size: 16px;
+    --input-bg: #f4f4f4; /* پس‌زمینه ورودی‌ها */
+    --hover-bg: #007AFF; /* رنگ پس‌زمینه در حالت hover */
+    --active-bg: #005BB5; /* رنگ پس‌زمینه در حالت active */
+}
+
+/* بدنه صفحه */
+.bodyBLUE {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    transition: background-color var(--transition-duration);
+}
+
+/* تیترها */
+.h1BLUE, .h2BLUE, .h3BLUE, .h4BLUE, .h5BLUE, .h6BLUE {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* لینک‌ها */
+.aBLUE {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px;
+    transition: color var(--transition-duration), transform var(--transition-duration);
+}
+
+.aBLUE:hover {
+    color: var(--button-bg);
+    transform: scale(1.05);
+}
+
+/* دکمه‌ها */
+.buttonBLUE {
+    background-color: var(--button-bg);
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color var(--transition-duration), transform var(--transition-duration);
+    margin: 15px 0;
+}
+
+.buttonBLUE:hover {
+    background-color: #28A745;
+    transform: scale(1.05);
+}
+
+.buttonBLUE:active {
+    background-color: #1C7A36;
+    transform: scale(1);
+}
+
+/* ورودی‌ها */
+.inputBLUE, .textareaBLUE {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border: 2px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: var(--input-padding);
+    width: 90%;
+    max-width: 400px;
+    height: 40px;
+    font-size: var(--font-size);
+    margin: 10px 0;
+    transition: border-color var(--transition-duration);
+}
+
+.inputBLUE:focus, .textareaBLUE:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* کارت‌ها */
+.cardBLUE {
+    background-color: #ffffff;
+    color: var(--text-color);
+    padding: 20px;
+    margin: 20px;
+    width: 90%;
+    max-width: 350px;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-duration), box-shadow var(--transition-duration);
+}
+
+.cardBLUE:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* فوتر */
+.footerBLUE {
+    background-color: #f1f1f1;
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-radius: var(--border-radius) 0 0 0;
+}
+
+/* انیمیشن برای بارگذاری عناصر */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInBLUE {
+    animation: fadeIn 1s ease-out;
+}
+
+/* رسانه‌های موبایلی (آیفون) */
+@media (max-width: 768px) {
+    .bodyBLUE {
+        padding: 20px;
+    }
+
+    .cardBLUE {
+        width: 100%;
+    }
+
+    .buttonBLUE {
+        width: 100%;
+    }
+
+    .inputBLUE, .textareaBLUE {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Reset */
+.bodyWONDER {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+/* Container Styling */
+.containerWONDER {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 20px;
+  position: relative;
+  color: white;
+}
+
+/* Title Styling */
+.titleWONDER {
+  font-size: 2rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  animation: flickerWONDER 3s infinite;
+}
+
+/* Title Animation */
+@keyframes flickerWONDER {
+  0%, 100% { text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc; }
+  50% { text-shadow: 0 0 30px #ff0080, 0 0 60px #ff0080; }
+}
+
+/* Button Styling */
+.buttonWONDER {
+  background: radial-gradient(circle, #ff00cc, #ff0080);
+  border: none;
+  border-radius: 50px;
+  padding: 15px 30px;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  animation: buttonPulseWONDER 3s infinite;
+}
+
+/* Button Animation */
+@keyframes buttonPulseWONDER {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.buttonWONDER:hover {
+  animation: shakeWONDER 0.5s infinite;
+}
+
+/* Button Hover Effect */
+@keyframes shakeWONDER {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(10px); }
+  50% { transform: translateX(-10px); }
+}
+
+/* Input Styling */
+.inputWONDER {
+  border: 2px solid #ff0080;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  animation: glowWONDER 2s infinite;
+  caret-color: #ff00cc;
+}
+
+.inputWONDER:focus {
+  outline: none;
+  animation: explodeWONDER 1s ease-in-out;
+}
+
+@keyframes glowWONDER {
+  0%, 100% { box-shadow: 0 0 10px #ff00cc; }
+  50% { box-shadow: 0 0 20px #ff0080; }
+}
+
+@keyframes explodeWONDER {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); box-shadow: 0 0 30px #ff0080; }
+  100% { transform: scale(1); }
+}
+
+/* Box Styling */
+.boxWONDER {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(45deg, #ff00cc, #ff0080);
+  animation: floatWONDER 5s infinite;
+  border-radius: 20px;
+}
+
+/* Box Animation */
+
+@keyframes floatWONDER {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Reset */
+.bodyODD {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  background: linear-gradient(135deg, #20002c, #cbb4d4);
+  animation: gradientShift 8s infinite alternate;
+}
+
+@keyframes gradientShift {
+  0% { background: linear-gradient(135deg, #20002c, #cbb4d4); }
+  50% { background: linear-gradient(135deg, #8e44ad, #f39c12); }
+  100% { background: linear-gradient(135deg, #3498db, #2ecc71); }
+}
+
+/* Container Styling */
+.containerODD {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 40px;
+  position: relative;
+  color: white;
+}
+
+/* Title Styling */
+.titleODD {
+  font-size: 3rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ff0080, #ff0000);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: glitchText 3s infinite alternate;
+  cursor: pointer;
+}
+
+@keyframes glitchText {
+  0% { transform: skewX(0deg); }
+  25% { transform: skewX(10deg) translateX(5px); }
+  50% { transform: skewX(-10deg) translateX(-5px); }
+  75% { transform: skewX(20deg) translateX(10px); }
+  100% { transform: skewX(0deg); }
+}
+
+/* Button Styling */
+.buttonODD {
+  background: linear-gradient(45deg, #ff0080, #ff0000);
+  border: none;
+  border-radius: 50%;
+  padding: 40px;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  animation: buttonSpin 4s infinite alternate;
+}
+
+@keyframes buttonSpin {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg); }
+}
+
+.buttonODD:active {
+  animation: explodeODD 1s forwards;
+}
+
+@keyframes explodeODD {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(2); opacity: 0.5; }
+  100% { transform: scale(5); opacity: 0; }
+}
+
+/* Input Styling */
+.inputODD {
+  border: 3px solid #ff0080;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  animation: glowODD 3s infinite alternate;
+  caret-color: #ff00cc;
+}
+
+.inputODD:focus {
+  animation: typingEffect 2s infinite alternate;
+}
+
+@keyframes glowODD {
+  0% { box-shadow: 0 0 10px #ff00cc; }
+  100% { box-shadow: 0 0 30px #ff0080; }
+}
+
+@keyframes typingEffect {
+  0% { border-color: #ff0080; transform: rotate(-3deg) scale(1); }
+  100% { border-color: #ff0000; transform: rotate(3deg) scale(1.2); }
+}
+
+/* Box Styling */
+.boxODD {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #ff0000, #ff0080);
+  animation: floatODD 6s infinite alternate, colorShift 3s infinite alternate;
+  border-radius: 50%;
+}
+
+@keyframes floatODD {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-50px) rotate(20deg); }
+  100% { transform: translateY(0) rotate(-20deg); }
+}
+
+@keyframes colorShift {
+  0% { background: radial-gradient(circle, #ff0000, #ff0080); }
+  100% { background: radial-gradient(circle, #ff0080, #ff0000); }
+}
+
+.boxODD:hover {
+  animation: explodeODD 2s forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Reset */
+.bodySMART {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  background: radial-gradient(circle, #0d0d0d, #050505 80%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #fff;
+}
+
+/* Glowing Border */
+.borderSMART {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border: 10px solid transparent;
+  border-image: linear-gradient(45deg, #ff00cc, #3333ff, #00ff99) 1;
+  border-image-slice: 1;
+  box-shadow: 0 0 50px rgba(255, 0, 204, 0.5), 0 0 100px rgba(0, 255, 153, 0.5);
+  z-index: 1;
+}
+
+/* Floating Light Orbs */
+@keyframes lightOrbSMART {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate(-30%, -70%) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.7;
+  }
+}
+.orbSMART {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.5), transparent);
+  border-radius: 50%;
+  filter: blur(40px);
+  animation: lightOrbSMART 5s infinite ease-in-out;
+  z-index: 2;
+}
+
+/* Central Card */
+.cardSMART {
+  background: rgba(20, 20, 20, 0.9);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5), 0 0 50px rgba(255, 0, 204, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px 50px;
+  text-align: center;
+  z-index: 3;
+}
+
+.cardSMART h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, #ff00cc, #00ff99);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cardSMART button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: linear-gradient(90deg, #ff00cc, #00ff99);
+  color: white;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardSMART button:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 30px rgba(255, 0, 204, 0.5);
+}
+
+/* Floating Orb Positions */
+.orbSMART:nth-child(1) {
+  top: 10%;
+  left: 20%;
+}
+
+.orbSMART:nth-child(2) {
+  top: 80%;
+  left: 70%;
+  animation-duration: 7s;
+}
+
+.orbSMART:nth-child(3) {
+  top: 40%;
+  left: 50%;
+  animation-duration: 4s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Reset */
+.bodyROBOT {
+  margin: 0;
+ROBOT  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: radial-gradient(circle, #0d0d0d, #020202);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+}
+
+/* Container */
+.containerROBOT {
+  width: 80%;
+  max-width: 700px;
+  height: 80%;
+  background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Header */
+.headerROBOT {
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(90deg, #00b3ff, #007bff);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.headerROBOT h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #00ff99, #00b3ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowROBOT 2s infinite alternate;
+}
+
+.headerROBOT p {
+  margin: 5px 0 0;
+  font-size: 1.2rem;
+  color: #a9a9a9;
+}
+
+/* Header Glow Animation */
+@keyframes glowROBOT {
+  0% { text-shadow: 0 0 5px #00b3ff, 0 0 10px #007bff; }
+  100% { text-shadow: 0 0 20px #00ff99, 0 0 30px #00b3ff; }
+}
+
+/* Chat Section */
+.chatROBOT {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Messages */
+.messageROBOT {
+  max-width: 70%;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+  position: relative;
+  animation: slideInROBOT 0.5s ease-out;
+}
+
+.messageROBOT.botROBOT {
+  background: linear-gradient(145deg, #007bff, #00b3ff);
+  color: white;
+  align-self: flex-start;
+  text-align: left;
+}
+
+.messageROBOT.userROBOT {
+  background: linear-gradient(145deg, #00ff99, #00d9b3);
+  color: black;
+  align-self: flex-end;
+  text-align: right;
+}
+
+/* Slide In Animation */
+@keyframes slideInROBOT {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Input Container */
+.inputContainerROBOT {
+  display: flex;
+  padding: 20px;
+  gap: 10px;
+  background: linear-gradient(90deg, #1a1a1a, #2a2a2a);
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 2;
+}
+
+.inputROBOT {
+  flex: 1;
+  padding: 15px;
+  border: 2px solid #00b3ff;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.inputROBOT:focus {
+  border-color: #00ff99;
+  box-shadow: 0 0 10px #00ff99;
+}
+
+/* Send Button */
+.sendButtonROBOT {
+  padding: 10px 20px;
+  border: none;
+  background: linear-gradient(90deg, #007bff, #00ff99);
+  color: white;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sendButtonROBOT:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 255, 153, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Reset */
+.bodyCHAT {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, #1e1e2f, #121212);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container */
+.containerCHAT {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  height: 80%;
+  background: #1b1b29;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebarCHAT {
+  width: 25%;
+  background: linear-gradient(to bottom, #2a2a40, #1f1f30);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.logoCHAT {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #00d4ff;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #00d4ff, 0 0 20px #007bff;
+}
+
+.contactsCHAT {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.contactCHAT {
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.contactCHAT:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+.activeCHAT {
+  background: linear-gradient(to right, #007bff, #00d4ff);
+}
+
+/* Chat Window */
+.chatWindowCHAT {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #12121b;
+}
+
+.headerCHAT {
+  padding: 20px;
+  background: #1e1e2f;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.messagesCHAT {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Messages */
+.messageCHAT {
+  max-width: 60%;
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.botCHAT {
+  background: linear-gradient(to right, #007bff, #00d4ff);
+  color: white;
+  align-self: flex-start;
+}
+
+.userCHAT {
+  background: linear-gradient(to right, #00ff99, #00d4b3);
+  color: black;
+  align-self: flex-end;
+}
+
+/* Input Container */
+.inputContainerCHAT {
+  display: flex;
+  padding: 20px;
+  background: #1e1e2f;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.inputCHAT {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+.inputCHAT::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sendButtonCHAT {
+  padding: 15px 20px;
+  margin-left: 10px;
+  border: none;
+  background: linear-gradient(to right, #007bff, #00d4ff);
+  color: white;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.sendButtonCHAT:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 212, 255, 0.5);
+}
+/* Comments Section */
+.commentsSectionCHAT {
+    margin-top: 40px;
+    background-color: #12121b;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Single Comment */
+.commentCHAT {
+    background-color: #1b1b29;
+    color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.commentCHAT .authorCHAT {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.commentCHAT .contentCHAT {
+    font-size: 1rem;
+}
+
+/* Comment Form */
+.commentFormCHAT {
+    display: flex;
+    flex-direction: column;
+}
+
+.commentFormCHAT input,
+.commentFormCHAT textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+}
+
+.commentFormCHAT button {
+    padding: 10px;
+    background: linear-gradient(to right, #007bff, #00d4ff);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.commentFormCHAT button:hover {
+    transform: scale(1.05);
+}
+/* Login Form */
+.loginFormCHAT {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    background: #1b1b29;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Form Header */
+.headerCHAT {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Input Fields */
+.inputFieldCHAT {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.inputLabelCHAT {
+    display: block;
+    color: white;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.inputCHAT {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+.inputCHAT::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Login Button */
+.loginButtonCHAT {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to right, #007bff, #00d4ff);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.loginButtonCHAT:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 212, 255, 0.5);
+}
+/* Admin Dashboard */
+.mainContentCHAT {
+    flex: 1;
+    padding: 20px;
+    background: #12121b;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sidebar */
+.sidebarCHAT {
+    width: 250px;
+    background: linear-gradient(to bottom, #2a2a40, #1f1f30);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.logoCHAT {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #00d4ff;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #00d4ff, 0 0 20px #007bff;
+}
+
+.navLinksCHAT {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.navLinkCHAT {
+    width: 100%;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.navLinkCHAT a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.navLinkCHAT a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* Header */
+.headerCHAT {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+}
+
+/* Stats */
+.statsCHAT {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.statCardCHAT {
+    background: #1b1b29;
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.statCardCHAT h3 {
+    margin-bottom: 10px;
+}
+
+.statCardCHAT p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* User List */
+.userListCHAT {
+    background: #1b1b29;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.userTableCHAT {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.userTableCHAT th,
+.userTableCHAT td {
+    padding: 15px;
+    text-align: left;
+}
+
+.userTableCHAT th {
+    background: #2a2a40;
+    color: white;
+}
+
+.userTableCHAT td {
+    background: #1b1b29;
+    color: white;
+}
+
+.actionButtonCHAT {
+    padding: 10px 15px;
+    background: linear-gradient(to right, #007bff, #00d4ff);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.actionButtonCHAT:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 212, 255, 0.5);
+}
+/* Wallet & Financial Dashboard */
+.mainContentCHAT {
+    flex: 1;
+    padding: 20px;
+    background: #12121b;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sidebar */
+.sidebarCHAT {
+    width: 250px;
+    background: linear-gradient(to bottom, #2a2a40, #1f1f30);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.logoCHAT {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #00d4ff;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #00d4ff, 0 0 20px #007bff;
+}
+
+.navLinksCHAT {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.navLinkCHAT {
+    width: 100%;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.navLinkCHAT a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.navLinkCHAT a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* Header */
+.headerCHAT {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+}
+
+/* Wallet Section */
+.walletSectionCHAT {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.walletCardCHAT {
+    background: #1b1b29;
+    padding: 20px;
+    width: 45%;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.walletCardCHAT h3 {
+    margin-bottom: 10px;
+}
+
+.walletCardCHAT p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Transaction History Section */
+.transactionSectionCHAT {
+    margin-bottom: 30px;
+}
+
+.transactionTableCHAT {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transactionTableCHAT th,
+.transactionTableCHAT td {
+    padding: 15px;
+    text-align: left;
+}
+
+.transactionTableCHAT th {
+    background: #2a2a40;
+    color: white;
+}
+
+.transactionTableCHAT td {
+    background: #1b1b29;
+    color: white;
+}
+
+/* Add Transaction Section */
+.addTransactionCHAT {
+    background: #1b1b29;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.inputFieldCHAT {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.inputLabelCHAT {
+    display: block;
+    color: white;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.inputCHAT {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+.inputCHAT::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.addTransactionButtonCHAT {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to right, #007bff, #00d4ff);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.addTransactionButtonCHAT:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 212, 255, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Reset */
+.bodyIR {
+  margin: 0;
+  padding: 0;
+  font-family: 'Vazir', sans-serif;
+  background: linear-gradient(to bottom, #fdfcfb, #e2d1c3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Container */
+.containerIR {
+  width: 90%;
+  max-width: 1000px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: center;
+  direction: rtl;
+}
+
+/* Header */
+.headerIR {
+  background: linear-gradient(to right, #8c4b3d, #d9a671);
+  padding: 20px;
+  color: #ffffff;
+  border-bottom: 5px solid #8c4b3d;
+}
+
+.titleIR {
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+/* Content */
+.contentIR {
+  padding: 30px;
+  color: #4a4a4a;
+}
+
+.textIR {
+  font-size: 1.2rem;
+  line-height: 2;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #f7e4d5, #e3c5ab);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Button */
+.buttonIR {
+  padding: 15px 30px;
+  border: none;
+  background: linear-gradient(to left, #8c4b3d, #d9a671);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.buttonIR:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(137, 75, 61, 0.4);
+}
+
+/* Footer */
+.footerIR {
+  background: linear-gradient(to left, #8c4b3d, #d9a671);
+  padding: 15px;
+  color: #ffffff;
+  border-top: 5px solid #8c4b3d;
+}
+
+.footerTextIR {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Persian Patterns */
+.body::after {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #d9a671, transparent 70%);
+  border-radius: 50%;
+  z-index: -1;
+  animation: movePatternIR 10s infinite linear;
+}
+
+@keyframes movePatternIR {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(-50px, -50px); }
+  100% { transform: translate(0, 0); }
+}
+
+.containerIR::before {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #8c4b3d, transparent 70%);
+  border-radius: 50%;
+  z-index: -1;
+  animation: movePatternIR 10s infinite linear reverse;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Reset */
+.bodyFIG {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(120deg, #1f1c2c, #928dab);
+  color: white;
+  overflow: hidden;
+}
+
+/* Container */
+.containerFIG {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* Header */
+.headerFIG {
+  padding: 50px 20px;
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: fadeInFIG 1.5s ease-out;
+}
+
+.titleFIG {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  animation: glowFIG 2s infinite alternate;
+}
+
+.subtitleFIG {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+/* About Section */
+.aboutFIG {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0;
+  gap: 20px;
+}
+
+.imageFIG {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ff9966, #1f1c2c);
+  animation: rotateFIG 5s infinite linear;
+}
+
+.textFIG {
+  flex: 1;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Projects Section */
+.projectsFIG {
+  margin-top: 50px;
+}
+
+.projectsTitleFIG {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #ff5e62, 0 0 20px #ff9966;
+}
+
+.projectCardFIG {
+  display: inline-block;
+  width: 250px;
+  height: 150px;
+  margin: 10px;
+  background: linear-gradient(to bottom, #1f1c2c, #ff5e62);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projectCardFIG:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(255, 94, 98, 0.5);
+}
+
+/* Footer */
+.footerFIG {
+  margin-top: 50px;
+  padding: 20px;
+  background: #1f1c2c;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Animations */
+@keyframes fadeInFIG {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowFIG {
+  from {
+    text-shadow: 0 0 10px #ff9966, 0 0 20px #ff5e62;
+  }
+  to {
+    text-shadow: 0 0 30px #ff9966, 0 0 40px #ff5e62;
+  }
+}
+
+@keyframes rotateFIG {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+    --primary-color: #4e92e0; /* آبی مدرن */
+    --secondary-color: #333;  /* پس‌زمینه تیره */
+    --text-color: #fff;  /* رنگ متن */
+    --code-color: #00ffcc; /* رنگ کدها */
+    --font-family: 'Courier New', monospace; /* فونت برنامه نویسی */
+    --font-size: 16px;
+}
+
+/* تنظیمات عمومی بدنه */
+.bodyCODE {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* کدهای معلق در پس‌زمینه */
+.codeBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    font-size: 20px;
+    color: var(--code-color);
+    font-family: 'Courier New', monospace;
+    white-space: nowrap;
+    animation: moveCode 20s linear infinite;
+    opacity: 0.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* انیمیشن حرکت کدها از بالا به پایین */
+@keyframes moveCode {
+    0% {
+        transform: translateY(-100%); /* شروع از بالای صفحه */
+    }
+    100% {
+        transform: translateY(100%); /* پایان در پایین صفحه */
+    }
+}
+
+/* کدهای مختلف به زبان‌های مختلف */
+.codeBLOCKCODE {
+    font-size: 1.5rem;
+    color: var(--code-color);
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    word-wrap: break-word;
+    animation: codeAnimation 4s ease-in-out infinite alternate;
+}
+
+/* انیمیشن برای متن کد */
+@keyframes codeAnimation {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* دکمه‌ها */
+.buttonCODE {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.buttonCODE:hover {
+    background-color: #00ccff;
+    transform: scale(1.1);
+}
+
+.buttonCODE:active {
+    transform: scale(1);
+}
+
+/* استایل برای موبایل */
+@media (max-width: 768px) {
+    .bodyCODE {
+        padding: 20px;
+    }
+
+    .codeBLOCKCODE {
+        width: 100%;
+    }
+
+    .buttonCODE {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==================={{Container}}================= */
+
+/* 1. کلاس با نام container_glass */
+.container_glass {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 2. کلاس با نام container_modern */
+.container_modern {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    transition: transform 0.3s;
+}
+
+.container_modern:hover {
+    transform: scale(1.05);
+}
+
+/* 3. کلاس با نام container_dark */
+.container_dark {
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    color: #f5f5f5;
+    border: 1px solid #444;
+}
+
+/* ==================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================{{Button}}================ */
+
+/* 1. کلاس با نام button_glass */
+.button_glass {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button_glass:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* 2. کلاس با نام button_modern */
+.button_modern {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.button_modern:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 3. کلاس با نام button_dark */
+.button_dark {
+    background: #1c1c1c;
+    border: 2px solid #444;
+    border-radius: 5px;
+    color: #f1f1f1;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.button_dark:hover {
+    background: #2a2a2a;
+    border-color: #666;
+    transform: translateY(-2px);
+}
+
+
+.button-modern {
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* گرادیانت جذاب */
+    color: white; /* رنگ متن */
+    padding: 15px 30px; /* فاصله داخلی */
+    border: none; /* بدون حاشیه */
+    border-radius: 25px; /* گوشه‌های گرد */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* سایه */
+    font-size: 16px; /* اندازه فونت */
+    cursor: pointer; /* نشانگر ماوس */
+    transition: transform 0.2s, box-shadow 0.2s; /* انیمیشن برای تعامل */
+}
+
+.button-modern:hover {
+    transform: scale(1.05); /* بزرگ‌تر شدن در حالت هاور */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* سایه عمیق‌تر در حالت هاور */
+}
+
+/* کلاس 1: دکمه ساده با رنگ پس‌زمینه */
+.button-one {
+    background-color: #4CAF50; /* سبز */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button-one:hover {
+    background-color: #45a049; /* سبز تیره */
+}
+
+/* کلاس 2: دکمه با سایه */
+.button-two {
+    background-color: #008CBA; /* آبی */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.button-two:hover {
+    transform: translateY(-2px);
+}
+
+/* کلاس 3: دکمه با گرادیانت */
+.button-three {
+    background: linear-gradient(45deg, #FF5733, #FFC300); /* گرادیانت */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.button-three:hover {
+    opacity: 0.8;
+}
+
+/* کلاس 4: دکمه شفاف */
+.button-four {
+    background-color: transparent;
+    color: #FF5733; /* رنگ متن */
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 2px solid #FF5733; /* رنگ حاشیه */
+    border-radius: 5px;
+}
+
+.button-four:hover {
+    background-color: #FF5733; /* پس‌زمینه هنگام هاور */
+    color: white; /* تغییر رنگ متن */
+}
+
+/* کلاس 5: دکمه با انیمیشن */
+.button-five {
+    background-color: #555555; /* خاکستری تیره */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+}
+
+.button-five::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255,0.3);
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.4s ease-in-out;
+}
+
+.button-five:hover::after {
+    transform: scaleX(1);
+}
+
+/* کلاس 6: دکمه با آیکون */
+.button-six {
+    background-color: #ff4081; /* صورتی */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex; /* استفاده از flex برای آیکون */
+    align-items: center; /* مرکز قرار دادن آیکون و متن */
+}
+
+.button-six i {
+    margin-right: 8px; /* فاصله بین آیکون و متن */
+}
+
+/* کلاس 7: دکمه با حاشیه گرد */
+.button-seven {
+    background-color: #673ab7; /* بنفش */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50px; /* حاشیه گرد */
+}
+
+/* کلاس 8: دکمه با افکت موج */
+.button-eight {
+    background-color: #3f51b5; /* آبی تیره */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button-eight::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: inherit; /* حاشیه گرد */
+    transform-origin: center; /* مرکز انیمیشن */
+}
+
+.button-eight:hover::before {
+   animation: wave-animation 0.6s linear infinite; /* انیمیشن موج */
+}
+
+@keyframes wave-animation {
+   from {
+       transform: scale(1);
+   }
+   to {
+       transform: scale(1.2);
+   }
+}
+
+/* کلاس 9: دکمه با افکت نور */
+.button-nine {
+   position: relative; 
+   overflow: hidden; 
+   background-color:#ff9800; /* نارنجی */
+   color:white; 
+   padding:15px 32px; 
+   border:none; 
+   border-radius:.5rem; 
+}
+
+.button-nine::after {
+   content:""; 
+   position:absolute; 
+   top:-50%; 
+   left:-50%; 
+   width:200%; 
+   height:200%; 
+   background-color:white;
+   }
+
+
+.button-beautiful {
+    display: inline-block;
+    padding: 15px 30px;
+    color: white;
+    background: linear-gradient(45deg, #ff6b6b, #f06595);
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.button-beautiful::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+}
+
+.button-beautiful:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.button-beautiful:hover {
+    transform: translateY(-3px);
+}
+
+/* افکت متنی */
+.button-beautiful span {
+    position: relative;
+    z-index: 1; /* قرار دادن متن بالای افکت */
+}
+   
+   
+   
+   
+.button-glass {
+    display: inline-block;
+    padding: 15px 30px;
+    color: blue;
+    background: rgba(255, 255, 255, 0.1); /* پس‌زمینه شفاف */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* حاشیه شفاف */
+    border-radius: 25px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    backdrop-filter: blur(10px); /* افکت بلوری */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* سایه */
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.button-glass:hover {
+    background: rgba(255, 255, 255, 0.2); /* تغییر رنگ پس‌زمینه در هاور */
+    transform: translateY(-3px); /* حرکت دکمه به سمت بالا */
+}
+
+/* افکت متنی */
+.button-glass span {
+    position: relative;
+    z-index: 1; /* قرار دادن متن بالای افکت */
+}
+
+/* ==================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =================={{LINK}}================== */
+/* کلاس link_glass */
+.link_glass {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.link_glass:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* کلاس link_modern */
+.link_modern {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.link_modern:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* کلاس link_dark */
+.link_dark {
+    background-color: #000;
+    border: 1px solid #4B0082;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.link_dark:hover {
+    background-color: #4B0082;
+    transform: scale(1.05);
+}
+
+
+/* لینک فوق مدرن */
+.link-modern {
+    color: #2575fc; /* رنگ لینک */
+    text-decoration: none; /* حذف خط زیر لینک */
+    font-weight: bold; /* بولد کردن متن */
+    transition: color 0.3s, text-shadow 0.3s; /* انیمیشن برای تعامل */
+}
+
+.link-modern:hover {
+    color: #6a11cb; /* تغییر رنگ در حالت هاور */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* سایه متن در حالت هاور */
+}
+
+.beautiful-link {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #6200ea; /* رنگ متن */
+    font-size: 24px;
+    text-decoration: none; /* حذف خط زیرین */
+    background: transparent; /* پس‌زمینه شفاف */
+    overflow: hidden; /* مخفی کردن قسمت‌های اضافی */
+    transition: color 0.3s ease; /* انیمیشن تغییر رنگ */
+}
+
+.beautiful-link::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: linear-gradient(45deg, #6200ea, #ff4081);
+    border-radius: 50%;
+    transition: width 0.5s ease, height 0.5s ease, top 0.5s ease, left 0.5s ease; /* انیمیشن برای دایره */
+    z-index: 0; /* قرار دادن دایره در پس‌زمینه */
+}
+
+.beautiful-link:hover::before {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+}
+
+.beautiful-link:hover {
+    color: white; /* تغییر رنگ متن در هاور */
+}
+
+.beautiful-link span {
+    position: relative;
+    z-index: 1; /* قرار دادن متن بالای دایره */
+}
+
+
+.circle-link {
+    position: relative;
+    display: inline-block;
+    color: #6200ea;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.circle-link::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(98, 0, 234, 0.3);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    z-index: 0;
+}
+
+.circle-link:hover::after {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+}
+
+.circle-link:hover {
+    color: white;
+}
+
+.shadow-link {
+    color: #ff4081;
+    text-decoration: none;
+    font-size: 24px;
+    transition: text-shadow 0.3s ease;
+}
+
+.shadow-link:hover {
+    text-shadow: 0 0 20px rgba(255, 64, 129, 0.8);
+}
+
+
+
+.color-change-link {
+    color: #6200ea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.color-change-link:hover {
+    color: #ff4081;
+}
+
+
+
+
+.underline-link {
+    position: relative;
+    color: #6200ea;
+    text-decoration: none;
+}
+
+.underline-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: #6200ea;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.underline-link:hover::after {
+    transform: scaleX(1);
+}
+
+
+
+
+.rotate-link {
+    display: inline-block;
+    color: #6200ea;
+    text-decoration: none;
+    transition: transform 0.5s ease;
+}
+
+.rotate-link:hover {
+    transform: rotate(15deg);
+}
+
+
+
+
+.pop-link {
+    color: #6200ea;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.pop-link:hover {
+    transform: scale(1.2);
+}
+
+
+
+
+.jump-link {
+    display: inline-block;
+    color: #6200ea;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.jump-link:hover {
+    transform: translateY(-5px);
+}
+
+
+
+
+.size-change-link {
+    color: #6200ea;
+    text-decoration: none;
+    transition: font-size 0.3s ease;
+}
+
+.size-change-link:hover {
+    font-size: 28px;
+}
+
+
+
+.fade-link {
+    color: #6200ea;
+    text-decoration: none;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.fade-link:hover {
+    opacity: 0.5;
+}
+
+
+
+
+.highlight-link {
+    color: #6200ea;
+    text-decoration: none;
+}
+
+.highlight-link:hover {
+    background-color: #ff4081; /* پس‌زمینه برجسته */
+    color: white; /* تغییر رنگ متن */
+}
+
+/* ==================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================={{LIST}}=================== */
+/* کلاس list_glass */
+.list_glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    list-style-type: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+}
+
+.list_glass li {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.list_glass li:last-child {
+    border-bottom: none;
+}
+
+/* کلاس list_modern */
+.list_modern {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    list-style-type: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.list_modern li {
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s;
+}
+
+.list_modern li:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* کلاس list_dark */
+.list_dark {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 20px;
+    list-style-type: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+}
+
+.list_dark li {
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.list_dark li:hover {
+    background-color: #3a3a3a;
+}
+
+
+.glass-list {
+    list-style-type: none;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.glass-list li {
+    padding: 15px 20px;
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: white;
+    transition: background 0.3s;
+}
+
+.glass-list li:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
+
+/* لیست فوق مدرن */
+.list-modern {
+    list-style-type: none; /* حذف نقاط لیست */
+    padding: 0; /* حذف فاصله داخلی */
+}
+
+.list-modern li {
+    background: rgba(255, 255, 255, 0.9); /* رنگ پس‌زمینه برای هر مورد لیست */
+    margin: 10px 0; /* فاصله بین موارد لیست */
+    padding: 15px; /* فاصله داخلی */
+    border-radius: 10px; /* گوشه‌های گرد */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* سایه */
+}
+
+
+
+.colorful-list {
+        list-style: none;
+        padding: 0;
+    }
+    .colorful-list li {
+        position: relative;
+        padding: 10px 30px;
+        margin: 10px 0;
+        background: #f0f0f0;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+    .colorful-list li:before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #3498db;
+    }
+    .colorful-list li:hover {
+        background: #3498db;
+        color: white;
+    }
+    
+    
+    
+    
+    .shadow-list {
+        list-style: none;
+        padding: 0;
+    }
+    .shadow-list li {
+        padding: 15px;
+        margin: 10px 0;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s;
+    }
+    .shadow-list li:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    
+    
+    .underline-list {
+        list-style: none;
+        padding: 0;
+    }
+    .underline-list li {
+        position: relative;
+        padding: 10px 0;
+        cursor: pointer;
+        color: #333;
+    }
+    .underline-list li:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 5px;
+        height: 2px;
+        background: transparent;
+        transition: background 0.3s;
+    }
+    .underline-list li:hover:after {
+        background: #3498db;
+    }
+    
+    
+    
+    
+    .icon-list {
+        list-style: none;
+        padding: 0;
+    }
+    .icon-list li {
+        padding: 10px 30px;
+        margin: 10px 0;
+        position: relative;
+        background: #f9f9f9;
+        border-left: 5px solid #3498db;
+    }
+    .icon-list li:before {
+        content: '✔';
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #3498db;
+    }
+    
+    
+    
+    .animated-list {
+        list-style: none;
+        padding: 0;
+    }
+    .animated-list li {
+        padding: 15px;
+        margin: 10px 0;
+        background: #e0e0e0;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+    }
+    .animated-list li:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: #3498db;
+        transform: translateX(-100%);
+        transition: transform 0.5s;
+        z-index: 0;
+    }
+    .animated-list li:hover:before {
+        transform: translateX(0);
+    }
+    .animated-list li span {
+        position: relative;
+        z-index: 1;
+    }
+    
+    
+
+
+.fancy-list {
+    list-style: none;
+    padding: 0;
+}
+
+.fancy-list h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #4A90E2;
+}
+
+.fancy-list li {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.fancy-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.fancy-list li:nth-child(odd) {
+    background-color: #e7f3fe;
+}
+
+.fancy-list li:nth-child(even) {
+    background-color: #d4edda;
+}
+/* ==================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================={{SearchBOX}}=============== */
+
+
+/* 1. کلاس serchbox_glass */
+.serchbox_glass {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    width: 300px;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.serchbox_glass::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.serchbox_glass:focus {
+    border-color: rgba(255, 255, 255, 0.5);
+    outline: none;
+}
+
+/* 2. کلاس serchbox_modern */
+.serchbox_modern {
+    background-color: #f0f0f0;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    padding: 12px 20px;
+    width: 100%;
+    max-width: 400px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.serchbox_modern::placeholder {
+    color: #aaa;
+}
+
+.serchbox_modern:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* 3. کلاس serchbox_dark */
+.serchbox_dark {
+    background-color: #1a1a1a;
+    border-radius: 25px;
+    border: 1px solid #444;
+    padding: 12px 20px;
+    width: 300px;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.serchbox_dark::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.serchbox_dark:focus {
+    border-color: #fff;
+    outline: none;
+}
+
+
+/* باکس جستجو فوق مدرن */
+.search-good {
+    display: flex; /* استفاده از فلیکس باکس */
+    align-items: center; /* تراز عمودی وسط */
+    background: rgba(255, 255, 255, 0.9); /* رنگ پس‌زمینه */
+    border-radius: 25px; /* گوشه‌های گرد */
+    padding: 10px; /* فاصله داخلی */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* سایه */
+}
+
+.search-good input {
+    border: none; /* بدون حاشیه */
+    outline: none; /* حذف حاشیه انتخاب */
+    flex: 1; /* پر کردن فضای موجود */
+    padding: 10px; /* فاصله داخلی */
+}
+
+
+
+
+.searchX-container {
+            position: relative;
+            width: 400px;
+        }
+
+        .searchX-box {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #007BFF;
+            border-radius: 25px;
+            outline: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .searchX-box:focus {
+            border-color: #0056b3;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .searchX-button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #007BFF;
+            border: none;
+            border-radius: 50%;
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .searchX-button:hover {
+            background-color: #0056b3;
+        }
+
+        .searchX-button:focus {
+            outline: none;
+        }
+        
+        
+        
+        
+        .searchG-box {
+        font-family: 'Vazirmatn', sans-serif;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            width: 400px;
+            transition: all 0.3s ease;
+        }
+
+        .searchG-box:hover {
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .searchG-box input {
+            border: none;
+            background: transparent;
+            color: black;
+            font-size: 18px;
+            flex: 1;
+            padding: 10px;
+            border-radius: 15px;
+            outline: none;
+        }
+
+        .searchG-box button {
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .searchG-box button:hover {
+            background: #0056b3;
+        }
+
+/* ==================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =================={{USERNAME}}================== */
+
+
+/* 1. کلاس username_box_glass */
+.username_box_glass {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    transition: transform 0.3s;
+}
+
+.username_box_glass:hover {
+    transform: scale(1.05);
+}
+
+/* 2. کلاس username_box_modern */
+.username_box_modern {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    transition: transform 0.3s;
+}
+
+.username_box_modern:hover {
+    transform: scale(1.05);
+}
+
+/* 3. کلاس username_box_dark */
+.username_box_dark {
+    background: #1c1c1c;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+    border: 2px solid #444;
+    transition: transform 0.3s;
+}
+
+.username_box_dark:hover {
+    transform: scale(1.05);
+}
+
+/* ==================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =================={{PASSWORD}}================== */
+
+/* کلاس برای باکس شیشه‌ای */
+.password_box_glass {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    width: 300px;
+    text-align: center;
+}
+
+/* کلاس برای باکس مدرن */
+.password_box_modern {
+    background: linear-gradient(135deg, #4a90e2, #9013fe);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.password_box_modern:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* کلاس برای باکس تم سیاه */
+.password_box_dark {
+    background: #1a1a1a;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    width: 300px;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+
+/* ==================================== */
+
+
+
+
+
+
+
+
+
+
+
+/* ================={{HEADER}}=================== */
+
+
+/* کلاس header_box_glass */
+.header_box_glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+/* کلاس header_box_modern */
+.header_box_modern {
+    background: linear-gradient(135deg, #4a90e2, #e94e77);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.header_box_modern:hover {
+    transform: scale(1.05);
+}
+
+/* کلاس header_box_dark */
+.header_box_dark {
+    background: #1a1a1a;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    color: #f0f0f0;
+    font-family: 'Georgia', serif;
+    text-align: center;
+}
+/* ==================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==================={{profile}}================= */
+
+/* Class for glass effect profile image */
+.profile_image_glass {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Class for modern responsive profile image */
+.profile_image_modern {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile_image_modern:hover {
+    transform: scale(1.05);
+}
+
+/* Class for dark royal profile image */
+.profile_image_dark {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #222;
+    border: 3px solid #444;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================{{text box}}==================== */
+/* باکس متن فوق مدرن */
+.text-w {
+    background: rgba(255, 255, 255, 0.9); /* رنگ پس‌زمینه */
+    border-radius: 15px; /* گوشه‌های گرد */
+    padding: 15px; /* فاصله داخلی */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* سایه */
+}
+
+/* کلاس text_glass */
+.text_glass {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+    transition: transform 0.3s;
+}
+
+.text_glass:hover {
+    transform: scale(1.05);
+}
+
+/* کلاس text_modern */
+.text_modern {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border-radius: 15px;
+    padding: 25px;
+    color: #ffffff;
+    font-family: 'Helvetica', sans-serif;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.text_modern:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* کلاس text_dark */
+.text_dark {
+    background: #1a1a1a;
+    border-radius: 10px;
+    padding: 20px;
+    color: #f0f0f0;
+    font-family: 'Georgia', serif;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid #444;
+    transition: transform 0.3s;
+}
+
+.text_dark:hover {
+    transform: scale(1.05);
+}
+
+/* ==================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================={{image}}=================== */
+/* کلاس image_glass */
+.image_glass {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.image_glass::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.image_glass img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    z-index: 0;
+}
+
+/* کلاس image_modern */
+.image_modern {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.image_modern:hover {
+    transform: scale(1.05);
+}
+
+.image_modern img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* کلاس image_dark */
+.image_dark {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.image_dark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.image_dark img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+/* ==================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==================={{video}}================= */
+/* کلاس video_glass */
+.video_glass {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.video_glass video {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* کلاس video_modern */
+.video_modern {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.video_modern:hover {
+    transform: scale(1.05);
+}
+
+.video_modern video {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* کلاس video_dark */
+.video_dark {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.video_dark video {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* ==================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================={{affect}}=================== */
+
+.affect_fade {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.affect_slide {
+    animation: slideIn 1s ease-in-out;
+}
+
+.affect_zoom {
+    animation: zoomIn 1s ease-in-out;
+}
+
+.affect_bounce {
+    animation: bounceIn 1s ease-in-out;
+}
+
+.affect_flip {
+    animation: flipInX 1s ease-in-out;
+}
+
+.affect_rotate {
+    animation: rotateIn 1s ease-in-out;
+}
+
+.affect_slide_left {
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.affect_slide_right {
+    animation: slideInRight 1s ease-in-out;
+}
+
+.affect_slide_up {
+    animation: slideInUp 1s ease-in-out;
+}
+
+.affect_slide_down {
+    animation: slideInDown 1s ease-in-out;
+}
+
+.affect_light_speed {
+    animation: lightSpeedIn 1s ease-in-out;
+}
+
+.affect_jack_in {
+    animation: jackInTheBox 1s ease-in-out;
+}
+
+.affect_roll_in {
+    animation: rollIn 1s ease-in-out;
+}
+
+.affect_tada {
+    animation: tada 1s ease-in-out;
+}
+
+.affect_wobble {
+    animation: wobble 1s ease-in-out;
+}
+
+.affect_pulse {
+    animation: pulse 1s ease-in-out;
+}
+
+.affect_shake {
+    animation: shake 1s ease-in-out;
+}
+
+.affect_bounce_in_left {
+    animation: bounceInLeft 1s ease-in-out;
+}
+
+.affect_bounce_in_right {
+    animation: bounceInRight 1s ease-in-out;
+}
+
+.affect_bounce_in_up {
+    animation: bounceInUp 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes bounceIn {
+    from, 20%, 50%, 80%, to { transform: translateY(0); }
+    40% { transform: translateY(-30px); }
+    60% { transform: translateY(-15px); }
+}
+
+@keyframes flipInX {
+    from { transform: perspective(400px) rotateX(-90deg); opacity: 0; }
+    to { transform: perspective(400px) rotateX(0); opacity: 1; }
+}
+
+@keyframes rotateIn {
+    from { transform: rotate(200deg); opacity: 0; }
+    to { transform: rotate(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes lightSpeedIn {
+    from { transform: translateX(100%) skewX(30deg); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes jackInTheBox {
+    from { transform: scale(0); opacity: 0; }
+    30% { transform: scale(1.1); }
+    40% { transform: scale(0.9); }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes rollIn {
+    from { transform: translateX(-100%) rotate(120deg); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes tada {
+    0%, 100% { transform: scale(1); }
+    10%, 20% { transform: scale(1.1); }
+    30% { transform: rotate(-3deg); }
+    40% { transform: rotate(3deg); }
+    50% { transform: scale(1.1); }
+    60% { transform: rotate(-3deg); }
+    70% { transform: scale(1); }
+}
+
+@keyframes wobble {
+    0%, 100% { transform: none; }
+    15% { transform: translateX(-25%) rotate(-5deg); }
+    30% { transform: translateX(20%) rotate(3deg); }
+    45% { transform: translateX(-15%) rotate(-3deg); }
+    60% { transform: translateX(10%) rotate(2deg); }
+    75% { transform: translateX(-5%) rotate(-1deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 20%, 30%, 50%, 70% { transform: translateX(-10px); }
+    40%, 60%, 80% { transform: translateX(10px); }
+}
+
+@keyframes bounceInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    60% { transform: translateX(30px); opacity: 1; }
+    to { transform: translateX(0); }
+}
+
+@keyframes bounceInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    60% { transform: translateX(-30px); opacity: 1; }
+    to { transform: translateX(0); }
+}
+
+@keyframes bounceInUp {
+    from { transform: translateY(100%); opacity: 0; }
+    60% { transform: translateY(-30px); opacity: 1; }
+    to { transform: translateY(0); }
+}
+/* ==================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* کلاس body_glass */
+.body_glass {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    padding: 20px;
+}
+
+/* کلاس body_modern */
+.body_modern {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    border-radius: 10px;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* کلاس body_dark */
+.body_dark {
+    background-color: #121212;
+    color: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.body_blue {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to bottom right, #e0f7fa, #80deea);
+        }
+
+        .container-modern {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+        }
+
+        .button-one {
+            display: inline-block;
+            padding: 12px 20px;
+            margin: 10px 5px;
+            background-color: #00796b;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .button-one:hover {
+            background-color: #004d40;
+            transform: translateY(-2px);
+        }
+
+        .logout-button {
+            display: inline-block;
+            padding: 12px 20px;
+            margin: 10px 5px;
+            background-color: red;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .logout-button:hover {
+            background-color: darkred;
+            transform: translateY(-2px);
+        }
+
