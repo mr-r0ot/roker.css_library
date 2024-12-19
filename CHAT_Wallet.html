@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Management & Wallet App</title>
+    <link rel="stylesheet" href="roker.css"> <!-- Link to the existing CSS file -->
+</head>
+<body class="bodyCHAT">
+
+    <div class="containerCHAT">
+        <!-- Sidebar -->
+        <div class="sidebarCHAT">
+            <div class="logoCHAT">Finance Dashboard</div>
+            <ul class="navLinksCHAT">
+                <li class="navLinkCHAT"><a href="#">Dashboard</a></li>
+                <li class="navLinkCHAT"><a href="#">Transactions</a></li>
+                <li class="navLinkCHAT"><a href="#">Wallet</a></li>
+                <li class="navLinkCHAT"><a href="#">Settings</a></li>
+                <li class="navLinkCHAT"><a href="#">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="mainContentCHAT">
+            <!-- Header Section -->
+            <div class="headerCHAT">
+                Welcome to Your Financial Dashboard
+            </div>
+
+            <!-- Wallet Balance Section -->
+            <div class="walletSectionCHAT">
+                <div class="walletCardCHAT">
+                    <h3>Current Balance</h3>
+                    <p>$2,500.00</p>
+                </div>
+                <div class="walletCardCHAT">
+                    <h3>Available Balance</h3>
+                    <p>$2,000.00</p>
+                </div>
+            </div>
+
+            <!-- Transaction History Section -->
+            <div class="transactionSectionCHAT">
+                <h3>Transaction History</h3>
+                <table class="transactionTableCHAT">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024-12-18</td>
+                            <td>Deposit</td>
+                            <td>$500.00</td>
+                            <td>Income</td>
+                        </tr>
+                        <tr>
+                            <td>2024-12-17</td>
+                            <td>Purchase</td>
+                            <td>$100.00</td>
+                            <td>Expense</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Add Transaction Section -->
+            <div class="addTransactionCHAT">
+                <h3>Add New Transaction</h3>
+                <form action="#" method="post">
+                    <div class="inputFieldCHAT">
+                        <label for="descriptionCHAT" class="inputLabelCHAT">Description</label>
+                        <input type="text" id="descriptionCHAT" name="description" class="inputCHAT" placeholder="Enter transaction description" required>
+                    </div>
+
+                    <div class="inputFieldCHAT">
+                        <label for="amountCHAT" class="inputLabelCHAT">Amount</label>
+                        <input type="number" id="amountCHAT" name="amount" class="inputCHAT" placeholder="Enter amount" required>
+                    </div>
+
+                    <div class="inputFieldCHAT">
+                        <label for="typeCHAT" class="inputLabelCHAT">Transaction Type</label>
+                        <select id="typeCHAT" name="type" class="inputCHAT">
+                            <option value="income">Income</option>
+                            <option value="expense">Expense</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="addTransactionButtonCHAT">Add Transaction</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
