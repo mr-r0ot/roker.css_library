@@ -20,26 +20,30 @@ The Roker.css Library is a modern and feature-rich CSS library designed to simpl
 1. Download the file from GitHub or use the online version.  
 2. Add it to your HTML:  
   
-html`
+html
+```
    <link rel="stylesheet" href="roker.css">
-`
+```
  
 3. Use predefined classes by combining the element name and theme. For example:  
 
-html`
+html
+```
    <button class="buttonROYAL">Click Me</button>
-`
+```
  
 
 You can apply themes to any element without restrictions. For example:  
-html`
+html
+```
 <element class="elementName+Theme"></element>
-`
+```
  
 Additionally, you can customize it further with inline styles:  
 html
+```
 <element class="className" style="your-css-code"></element>
-
+```
  
 
 ---
@@ -68,9 +72,12 @@ Roker.css offers a wide variety of themes for creative and unique designs:
 
 Examples:  
 html
-<button class="buttonCYBER">I'm Hacker!</button>  
+```
+<button class="buttonCYBER">I'm Hacker!</button>
+```
+```
 <button class="buttonEVIL">It's Evil!</button>
-
+```
  
 
 For more examples, visit the [Simple Projects Section](https://github.com/mr-r0ot/roker.css_library/tree/Simple-projects).  
@@ -87,9 +94,12 @@ Available Models:
 
 Usage:  
 html
-<button class="button_glass">Hello</button>  
+```
+<button class="button_glass">Hello</button>
+```
+```
 <input class="username_dark" placeholder="Username">  
-
+```
  
 
 ---
@@ -117,32 +127,39 @@ html
 2. فایل را به HTML خود اضافه کنید:  
   
 html
+```
    <link rel="stylesheet" href="roker.css">
-   
+```
  
 3. از کلاس‌های آماده برای طراحی استفاده کنید:  
   
 html
+```
    <button class="buttonROYAL">روی من کلیک کنید</button>
-   
+```
  
 
 فرمول استفاده:  
 html
+```
 <نام المان class="نام المان+نام تم"></نام المان>
-
+```
  
 برای مثال:  
 html
-<button class="buttonCYBER">I'm Hacker!</button>  
+```
+<button class="buttonCYBER">I'm Hacker!</button>
+```
+```
 <input class="username_dark" placeholder="نام کاربری">  
-
+```
  
 
 همچنین می‌توانید کد CSS دلخواه خود را اضافه کنید:  
 html
+```
 <عنصر class="نام کلاس" style="کد CSS دلخواه"></عنصر>
-
+```
  
 
 ---
@@ -171,9 +188,12 @@ html
 
 برای مثال:  
 html
-<button class="buttonEVIL">این خشن است!</button>  
+```
+<button class="buttonEVIL">این خشن است!</button>
+```
+```
 <input class="password_glass" placeholder="رمز عبور">  
-
+```
  
 
 برای مثال‌های بیشتر به [Simple Projects](https://github.com/mr-r0ot/roker.css_library/tree/Simple-projects) مراجعه کنید.  
@@ -190,9 +210,12 @@ Roker.css از مدل‌های خاص برای طراحی المان‌ها پش
 
 مثال‌ها:  
 html
-<button class="button_glass">سلام</button>  
+```
+<button class="button_glass">سلام</button>
+```
+```
 <input class="searchBox_modern" placeholder="جستجو کنید">  
-
+```
  
 
 ---
